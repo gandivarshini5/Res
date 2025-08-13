@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e55b50;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🍽 My Restaurant</h1>
+    <p>Delicious food, made with love</p>
+</header>
+
+<section class="menu">
+    <div class="item">
+        <h3>Pizza</h3>
+        <p>₹250</p>
+        <button onclick="order('Pizza')">Order Now</button>
+    </div>
+    <div class="item">
+        <h3>Burger</h3>
+        <p>₹150</p>
+        <button onclick="order('Burger')">Order Now</button>
+    </div>
+    <div class="item">
+        <h3>Pasta</h3>
+        <p>₹200</p>
+        <button onclick="order('Pasta')">Order Now</button>
+    </div>
+</section>
+
+<script>
+    function order(item) {
+        alert("You have ordered: " + item + " ✅");
+    }
+</script>
+
+</body>
+</html>
